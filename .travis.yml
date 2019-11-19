@@ -8,9 +8,9 @@ before_install:
     - conda config --add channels r
     - conda create --yes -n test
     - conda activate test
+    - conda install --yes python=3.6
     - conda install --yes pycodestyle
     - conda install --yes matplotlib
-    - conda install --yes python=3.6
       
 script:
     - bash test_get_gene_counts.sh
