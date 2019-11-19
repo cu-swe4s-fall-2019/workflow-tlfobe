@@ -20,3 +20,4 @@ run test_get_gene_counts_invalid_file python get_gene_counts.py --file_name GTEx
 assert_exit_code 1
 assert_in_stderr HAHA
 
+
