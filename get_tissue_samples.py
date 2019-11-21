@@ -2,6 +2,7 @@ import sys
 import argparse
 import os
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--file_name",
@@ -18,7 +19,7 @@ def main():
                         required=True,
                         help="name of output file",
                         type=str)
-    
+
     args = parser.parse_args()
 
     file_name = args.file_name
@@ -37,8 +38,6 @@ def main():
     header = None
     sampid_col = -1
     smts_col = -1
-
-
 
     try:
         f = open(file_name, 'rt')
@@ -65,10 +64,10 @@ def main():
 
         if A[smts_col] == tissue_name:
             o.write(A[sampid_col] + '\n')
-        
+
         if A[smts_col] not in tissue_names:
             tissue_names.append(A[smts_col])
-    
+
     if tissue_name not in tissue_names:
         print("get_tissue_samples.py:", tissue_name,
               "isn't present in", file_name+"!", file=sys.stderr)
@@ -77,6 +76,7 @@ def main():
 
     f.close()
     o.close()
+
 
 if __name__ == "__main__":
     main()
