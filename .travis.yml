@@ -16,4 +16,5 @@ script:
     - bash test_get_gene_counts.sh
     - bash test_get_tissue_samples.sh
     - bash test_box.sh
+    - python -u test_box.py
     - pycodestyle *.py
