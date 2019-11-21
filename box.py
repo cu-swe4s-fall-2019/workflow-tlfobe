@@ -8,6 +8,12 @@ matplotlib.use('Agg')
 
 
 def get_tissue_data(tissue, gene_list):
+    if not isinstance(tissue, str):
+        raise TypeError("box.get_tissue_data(): tissue needs to be type str")
+    if not isinstance(gene_list, list):
+        raise TypeError("box.get_tissue_data(): gene_list needs to be type list")
+    if not all([type(a) == str for a in gene_list]):
+        raise TypeError("box.get_tissue_data(): gene_list must be a list of type str")
     genes_counts = []
     tissue_samp_ids = []
     try:
