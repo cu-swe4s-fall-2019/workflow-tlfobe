@@ -25,6 +25,6 @@ This output will run the entire pipeline, which:
 4. Uses those files to generate a plot with boxplots of the gene counts for each tissue and gene type.
 
 The full workflow results in figure like such: 
-![Alt text](sample_output)
+![Alt text]()
 <img src="images/Brain-Heart-Blood-Skin_SDHB-MEN1-KCNH2-MSH2-MYL2-BRCA2.png">
 
