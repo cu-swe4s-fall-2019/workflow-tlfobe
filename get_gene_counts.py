@@ -33,8 +33,8 @@ def main():
         print("get_gene_counts.py:", out_file_name,
               "is a directory, please choose a new outfile!", file=sys.stderr)
     except PermissionError:
-        print("get_gene_counts.py", out_file_name, 
-              "doesn't allow writing!", file = sys.stderr)
+        print("get_gene_counts.py", out_file_name,
+              "doesn't allow writing!", file=sys.stderr)
     version = None
     dim = None
     header = None
@@ -49,8 +49,8 @@ def main():
         print("get_gene_counts.py:", file_name,
               "is a directory, please choose a new datafile!", file=sys.stderr)
     except PermissionError:
-        print("get_gene_counts.py", file_name, 
-              "doesn't allow writing!", file = sys.stderr)
+        print("get_gene_counts.py", file_name,
+              "doesn't allow writing!", file=sys.stderr)
 
     gene_names = []
 
