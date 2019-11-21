@@ -1,5 +1,7 @@
 # workflow-tlfobe
 
+[![Build Status](https://travis-ci.com/cu-swe4s-fall-2019/workflow-tlfobe.svg?branch=master)](https://travis-ci.com/cu-swe4s-fall-2019/workflow-tlfobe)
+
 This repository is a testcase for using SnakeMake to run a pipeline of files. In this repo one can generate a series of boxplots of the gene counts for any number of genes and tissues found in the GTEx dataset.
 
 ## Installation
