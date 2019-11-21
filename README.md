@@ -20,7 +20,7 @@ $ snakemake
 ```
 
 The full workflow results in figure like such: 
-<img src="images/Brain-Heart-Blood-Skin_SDHB-MEN1-KCNH2-MSH2-MYL2-RCA2.png">
+<img src="images/Brain-Heart-Blood-Skin_SDHB-MEN1-KCNH2-MSH2-MYL2-BRCA2.png">
 
 To change which genes and tissues are used to generate specific histograms, you can modify the `TISSUES` and `GENES` variables at the head of the `Snakemake` file.
 
@@ -165,7 +165,7 @@ Job counts:
 This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.
 ```
 
-The figure generate from this run is shown below:
+The figure generated from this run is shown below:
 
 <img src="images/Brain-Heart-Blood-Skin-Muscle-Kidney-Prostate_SDHB-MEN1-KCNH2-MSH2-MYL2-BRCA2.png">
 
