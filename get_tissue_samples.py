@@ -18,7 +18,13 @@ def main():
     parser.add_argument("--output_file",
                         required=True,
                         help="name of output file",
-                        type=str)
+                        type=str
+                        )
+    parser.add_argument("--attribute",
+                        help="type of attribute to pull for data extraction",
+                        type=str,
+                        default="SMTS"
+                        )
 
     args = parser.parse_args()
 
@@ -59,7 +65,16 @@ def main():
         if header is None:
             header = A
             sampid_col = A.index('SAMPID')
-            smts_col = A.index('SMTS')
+            try:
+                smts_col = A.index(args.attribute)
+            except ValueError:
+                print("get_tissue_samples.py:",
+                      args.attribute, "is not a valid attribue!",
+                      file=sys.stderr)
+                os.remove(out_file_name)
+                sys.exit(1)
+            continue
+        if smts_col > len(A):
             continue
 
         if A[smts_col] == tissue_name:
@@ -70,7 +85,9 @@ def main():
 
     if tissue_name not in tissue_names:
         print("get_tissue_samples.py:", tissue_name,
-              "isn't present in", file_name+"!", file=sys.stderr)
+              "isn't present in", file_name+" under the", args.attribute,
+              " column. Please select from the following valid options:\n",
+              ", ".join(tissue_names), file=sys.stderr)
         os.remove(out_file_name)
         sys.exit(1)
 

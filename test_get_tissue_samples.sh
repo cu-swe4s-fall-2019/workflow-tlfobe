@@ -23,4 +23,8 @@ run test_get_tissue_samples_invalid_file python get_tissue_samples.py --file_nam
 assert_exit_code 1
 assert_in_stderr HAHA
 
+run test_get_tissue_samples_invalid_attribute python get_tissue_samples.py --file_name GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt --tissue_name HAHA --output_file out.txt --attribute NOTATTRIBUTE
+assert_exit_code 1
+assert_in_stderr NOTATTRIBUTE
+
 rm GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt
