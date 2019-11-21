@@ -22,6 +22,13 @@ $ snakemake
 The full workflow results in figure like such: 
 <img src="images/Brain-Heart-Blood-Skin_SDHB-MEN1-KCNH2-MSH2-MYL2-RCA2.png">
 
+To change which genes and tissues are used to generate specific histograms, you can modify the `TISSUES` and `GENES` variables at the head of the `Snakemake` file.
+
+```
+TISSUES = ["Brain", "Heart", "Blood", "Skin" ]
+GENES = ["SDHB", "MEN1", "KCNH2", "MSH2", "MYL2", "BRCA2"]
+```
+
 ## Workflow
 
 This output will run the entire pipeline, which:
